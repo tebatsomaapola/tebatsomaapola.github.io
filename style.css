@@ -1,0 +1,185 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #05050a;
+  color: #e6faff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+nav h1 {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+nav a {
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0a0a15, #000);
+}
+
+/* Floating neon particles */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.08) 0,
+    rgba(0, 255, 255, 0.08) 2px,
+    transparent 2px,
+    transparent 20px
+  );
+  animation: drift 12s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes drift {
+  from { transform: translate(-10%, -10%); }
+  to { transform: translate(10%, 10%); }
+}
+
+.hero-content .text h2 {
+  font-size: 3rem;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+}
+
+.hero-content .text p {
+  margin-top: 15px;
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #00eaff;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 40px;
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* PROJECT CARDS */
+.project {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.project h3 {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.project .summary {
+  margin: 10px 0 20px;
+  opacity: 0.9;
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+.block h4 {
+  color: #00eaff;
+  margin-bottom: 8px;
+}
+
+.stack span {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 6px;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+/* CONTACT */
+.contact a {
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  margin-top: 40px;
+}
